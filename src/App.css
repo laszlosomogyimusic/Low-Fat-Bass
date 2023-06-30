@@ -1,15 +1,15 @@
-.section--padding {
+.app__section {
   padding: 4rem 6rem;
 }
 
-.flex--center {
+.app__flex--center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.p--ubuntu {
-  font-family: var(--font-alt);
+.app__paragraph {
+  font-family: var(--font-text);
   color: var(--white);
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -18,8 +18,8 @@
   font-size: 15px;
 }
 
-.p--raleway {
-  font-family: var(--font-base);
+.app__subheader {
+  font-family: var(--font-header);
   color: var(--white);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -27,6 +27,15 @@
   font-feature-settings: 'tnum' on, 'lnum' on;
   line-height: 29.9px;
   font-size: 23px;
+}
+
+.headtext__cormorant {
+  font-family: var(--font-header);
+  color: var(--ecru);
+  font-size: 64px;
+  line-height: 83.2px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
 }
 
 .app__wrapper {
@@ -56,7 +65,11 @@
   margin-left: 2rem;
 }
 
-.custom__button {
+.app__image {
+  height: 20px;
+}
+
+.app__button {
   background-color: var(--ecru);
     color: var(--black);
     font-family: var(--font-base);
@@ -69,4 +82,12 @@
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.app__bg {
+  background: url('./assets/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
