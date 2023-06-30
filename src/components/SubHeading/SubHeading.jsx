@@ -6,7 +6,7 @@ import { images } from "../../constants"
 const SubHeading = ({ title }) => (
   <article style={{ marginBottom: '1rem' }}>
     <p className="app__subheader">{title}</p>
-    <img src={images.guitar} alt="guitar" className="app__image" />
+    <img src={images.drumstickHorizontal} alt="drumstick" className="app__image" />
   </article>
 );
 

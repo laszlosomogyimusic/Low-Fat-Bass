@@ -3,7 +3,8 @@ import logoNoCircle from '../assets/21_NoCircle.png';
 import laszloSomogyiMusic from '../assets/LaszloSomogyiMusic.png';
 import welcome from '../assets/welcome.png';
 import guitar from '../assets/guitar.svg';
-import drumsticks from '../assets/drumsticks.png';
+import drumsticksVertical from '../assets/drumsticks_vertical.png';
+import drumstickHorizontal from '../assets/drumstick_horizontal.png';
 
 export default {
   logoCircle,
@@ -11,5 +12,6 @@ export default {
   laszloSomogyiMusic,
   welcome,
   guitar,
-  drumsticks,
+  drumsticksVertical,
+  drumstickHorizontal,
 };

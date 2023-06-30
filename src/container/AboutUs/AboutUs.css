@@ -1,3 +1,4 @@
+
 .aboutus {
   position: relative;
 }
@@ -8,8 +9,7 @@
 }
 
 .aboutus__overlay img {
-  width: 391px;
-  height: 415px;
+  width: 400px;
   z-index: 0;
 }
 
@@ -51,3 +51,4 @@
   margin: 2rem 0;
   color: var(--color-grey);
 }
+  
