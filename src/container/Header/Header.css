@@ -3,7 +3,7 @@
 }
 
 .header__h1 {
-  font-family: var(--font-base);
+  font-family: var(--font-header);
   color: var(--ecru);
   letter-spacing: 0.04em;
   /* text-transform: uppercase; */
