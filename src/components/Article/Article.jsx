@@ -3,32 +3,25 @@ import "./Article.css"
 
 import  { images } from "../../constants/"
 
-let articleClassName = "article";
-let titleClassName = "article__title";
-let subtitleClassName = "article__subtitle";
-let textClassName = "article__text";
+var data = "";
+var articleClassName = "";
 
-const initClassNames = (titleModifierClass, subtitleModifierClass, textModifierClass, justifyContentTo) => {
-  console.log("initClassNames: " + textClassName);
-  switch(justifyContentTo) {
+
+const justifyContent = () => {
+  switch(data.justifyContentTo) {
     case "left":
-      articleClassName += " article--justifyleft"   //make sure there is a leading space in the string
+      articleClassName += "article article--justifyleft"  
     break;
     case "right":
-      articleClassName += " article--justifyright"  //make sure there is a leading space in the string
+      articleClassName += "article article--justifyright" 
     break;
     case "center":
-      articleClassName += " article--justifycenter" //make sure there is a leading space in the string
+      articleClassName += "article article--justifycenter"
     break;
     default:
-      articleClassName += " article--justifyleft"   //make sure there is a leading space in the string
+      articleClassName += "article article--justifyleft"  
     break;
-  }
-
-  titleClassName += titleModifierClass ? ` ${titleModifierClass}` : "";           //make sure there is a leading space in the string
-  subtitleClassName += subtitleModifierClass ? ` ${subtitleModifierClass}` : "";  //make sure there is a leading space in the string
-  textClassName += textModifierClass ? ` ${textModifierClass}` : "";              //make sure there is a leading space in the string
-
+  }  
 }
 
 const HorizontalDrumstick = ({ doRotateImage = false }) => {
@@ -41,37 +34,83 @@ const HorizontalDrumstick = ({ doRotateImage = false }) => {
   )
 }
 
-const Article = ({title = "", titleModifierClass = "", text = "", textModifierClass = "", isTextColorGrey=false, subtitle = "", subtitleModifierClass= "", justifyContentTo = "", buttonText = "" }) => {
-  initClassNames(titleModifierClass, subtitleModifierClass, textModifierClass, justifyContentTo);
-  console.log("Article: " + textClassName);
+const Paragraph = ({ pText, pClassName, pStyle}) => {
+  return (
+    <>
+    { pStyle ? (
+      <p className={pClassName} style={pStyle}>{pText}</p>
+    ) : (
+      <p className={pClassName}>{pText}</p>
+    )}
+    </>
+  )
+}
 
+const H1 = ({ h1Text, h1ClassName, h1Style}) => {
+  return (
+    <>
+    { h1Style ? (
+      <h1 className={h1ClassName} style={h1Style}>{h1Text}</h1>
+    ) : (
+      <h1 className={h1ClassName}>{h1Text}</h1>
+    )}
+    </>
+  )
+}
+
+const renderWithSubtitle = () => {
+  return (
+    <div>
+      <Paragraph 
+        pClassName="article__subtitle" 
+        pStyle={data.subtitleStyle}
+        pText={data.subtitle} 
+      />            
+      <HorizontalDrumstick
+        doRotateImage = {data.justifyContentTo === "left" ? false : true} 
+      />
+      <H1 
+        h1ClassName="article__title"
+        h1Text = {data.title}
+        h1Style = {data.titleStyle}
+      />
+    </div>
+  );
+}
+
+const renderWithoutSubtitle = () => {
+  return (
+    <div>
+      <H1 
+        h1ClassName="article__title"
+        h1Text = {data.title}
+        h1Style = {data.titleStyle}
+      />
+      <HorizontalDrumstick
+        doRotateImage = {data.justifyContentTo === "left" ? false : true} 
+      />
+    </div>
+  );
+}
+
+// const Article = ({title = "", titleStyle = "", text = "", textStyle = "", subtitle = "", subtitleStyle= "", justifyContentTo = "", buttonText = "" }) => {
+const Article = (props) => {
+  data = props;
+  justifyContent();
   return (
     <article className={articleClassName}>
-      { subtitle ? (
-          <div>
-            <p className={subtitleClassName}>{subtitle}</p>
-            <HorizontalDrumstick
-              doRotateImage = {justifyContentTo === "left" ? false : true} 
-            />
-            <h1 className={titleClassName}>{title}</h1>
-          </div>
-          )
-        : (
-            <div>
-              <h1 className={titleClassName}>{title}</h1>
-              <HorizontalDrumstick
-                doRotateImage = {justifyContentTo === "left" ? false : true} 
-              />
-            </div>
-        )
+      { data.subtitle ? renderWithSubtitle() : renderWithoutSubtitle()
       }
-      { text && (
-        <p 
-          className={textClassName}>{text}</p>
+      { data.text && (
+        <Paragraph 
+          pClassName="article__text"
+          pStyle={data.textStyle}
+          pText={data.text} 
+        />
       )}
 
-      { buttonText && (
-        <button type="button" className="article__button">{buttonText}</button>
+      { data.buttonText && (
+        <button type="button" className="article__button">{data.buttonText}</button>
       )}      
     </article>
   )
