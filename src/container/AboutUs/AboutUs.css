@@ -2,12 +2,12 @@
   position: relative;
 }
 
-.aboutus__overlay {
+.aboutus__logo21 {
   position: absolute;
   inset: 0;
 }
 
-.aboutus__overlay img {
+.aboutus__logo21-image {
   width: 400px;
   z-index: 0;
 }
@@ -15,16 +15,6 @@
 .aboutus__content {
   width: 100%;
   z-index: 2;
-}
-
-.aboutus__about {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
-
-  text-align: right;
 }
 
 .aboutus__drumsticks {
@@ -35,19 +25,7 @@
   height: 800px;
 }
 
-.aboutus__history {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-
-  text-align: left;
-}
-
-.aboutus__about p,
-.aboutus__history p {
-  margin: 2rem 0;
-  color: var(--color-grey);
+.aboutus__article-text--grey {
+  color: var(--grey);
 }
   
