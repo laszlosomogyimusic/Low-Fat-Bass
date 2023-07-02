@@ -1,3 +1,25 @@
+.article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.article--justifyright {
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;  
+}
+
+.article--justifyleft {
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;  
+}
+
+.article--justifycenter {
+  text-align: center;  
+}
+
 .article__image {
   width: 15%;
 }

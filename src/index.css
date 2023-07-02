@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu:wght@500&display=swap');
 
 :root {
-  --font-header: 'Raleway', sans-serif;
+  --font-header: font-family: 'Merriweather', serif;
   --font-text: 'Ubuntu', sans-serif;
 
   --midnight-green: #073b3aff;

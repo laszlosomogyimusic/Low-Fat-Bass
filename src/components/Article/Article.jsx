@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Article.css"
 
-import  { images, article } from "../../constants/"
+import  { images } from "../../constants/"
 
 const HorizontalDrumstick = ({ doRotateImage = false }) => {
   return (
@@ -13,14 +13,30 @@ const HorizontalDrumstick = ({ doRotateImage = false }) => {
   )
 }
 
-const Article = ({title, text = "", isTextColorGrey=false, subtitle = "", side = article.leftSide, buttonText = "" }) => {
+const Article = ({title, text = "", isTextColorGrey=false, subtitle = "", justifyContentTo = "", buttonText = "" }) => {
+  let articleClassName = "";
+  switch(justifyContentTo) {
+    case "left":
+      articleClassName = "article article--justifyleft"
+    break;
+    case "right":
+      articleClassName = "article article--justifyright"
+    break;
+    case "center":
+      articleClassName = "article article--justifycenter"
+    break;
+    default:
+      articleClassName = "article article--justifyleft"
+    break;
+  }
+  
   return (
-    <article className="article">
+    <article className={articleClassName}>
       { subtitle ? (
           <div>
             <p className="article__subtitle">{subtitle}</p>
             <HorizontalDrumstick
-              doRotateImage = {side === "left" ? false : true} 
+              doRotateImage = {justifyContentTo === "left" ? false : true} 
             />
             <h1 className="article__title">{title}</h1>
           </div>
@@ -29,7 +45,7 @@ const Article = ({title, text = "", isTextColorGrey=false, subtitle = "", side =
             <div>
               <h1 className="article__title">{title}</h1>
               <HorizontalDrumstick
-                doRotateImage = {side === article.leftSide ? false : true} 
+                doRotateImage = {justifyContentTo === "left" ? false : true} 
               />
             </div>
         )
