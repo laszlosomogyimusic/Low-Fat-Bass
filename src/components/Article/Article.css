@@ -30,7 +30,7 @@
 }
 
 .article__subtitle {
-  font-family: var(--font-text);
+  font-family: var(--font-header);
   color: var(--white);
   font-weight: 700;
   letter-spacing: 0.04em;

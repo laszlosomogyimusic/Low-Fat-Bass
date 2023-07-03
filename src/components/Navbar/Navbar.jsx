@@ -15,7 +15,7 @@ const Navbar = () => {
       <ul className="navbar__links">
         <li className="app__paragraph navbar__linkitem"><a href="#home">Home</a></li>
         <li className="app__paragraph navbar__linkitem"><a href="#about">About</a></li>
-        <li className="app__paragraph navbar__linkitem"><a href="#menu">Menu</a></li>
+        <li className="app__paragraph navbar__linkitem"><a href="#services">Services</a></li>
         <li className="app__paragraph navbar__linkitem"><a href="#awards">Awards</a></li>
         <li className="app__paragraph navbar__linkitem"><a href="#contact">Contact</a></li>
       </ul>
@@ -33,7 +33,7 @@ const Navbar = () => {
             <ul className="navbar__hamburgermenu-links">
               <li className="app__paragraph navbar__hamburgermenu-linkitem"><a href="#home">Home</a></li>
               <li className="app__paragraph navbar__hamburgermenu-linkitem"><a href="#about">About</a></li>
-              <li className="app__paragraph navbar__hamburgermenu-linkitem"><a href="#menu">Menu</a></li>
+              <li className="app__paragraph navbar__hamburgermenu-linkitem"><a href="#services">Services</a></li>
               <li className="app__paragraph navbar__hamburgermenu-linkitem"><a href="#awards">Awards</a></li>
               <li className="app__paragraph navbar__hamburgermenu-linkitem"><a href="#contact">Contact</a></li>
             </ul>

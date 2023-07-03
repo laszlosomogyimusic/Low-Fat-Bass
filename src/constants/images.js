@@ -5,6 +5,7 @@ import welcome from '../assets/welcome.png';
 import guitar from '../assets/guitar.svg';
 import drumsticksVertical from '../assets/drumsticks_vertical.png';
 import drumstickHorizontal from '../assets/drumstick_horizontal.png';
+import bassGuitar from '../assets/bassguitar.jpg'
 
 export default {
   logoCircle,
@@ -14,4 +15,5 @@ export default {
   guitar,
   drumsticksVertical,
   drumstickHorizontal,
+  bassGuitar,
 };
