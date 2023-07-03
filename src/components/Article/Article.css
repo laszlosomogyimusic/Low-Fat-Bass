@@ -58,12 +58,8 @@
   text-transform: capitalize;
   line-height: 28px;
   font-size: 15px;
+  margin: 2rem 0rem;
 }
-
-.article__text--grey {
-  color: var(--grey);
-}
-
 
 .article__button {
   background-color: var(--ecru);
