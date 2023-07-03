@@ -2,15 +2,6 @@
   background-color: var(--midnight-green);
 }
 
-.header__h1 {
-  font-family: var(--font-header);
-  color: var(--ecru);
-  letter-spacing: 0.04em;
-  /* text-transform: uppercase; */
-  line-height: 117px;
-  font-size: 90px;
-}
-
 .header__image {
   width: 80%;
 }

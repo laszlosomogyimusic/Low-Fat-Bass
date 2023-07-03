@@ -22,7 +22,6 @@ const AboutUs = () => {
   let historyArticle = {
     justifyContentTo: "left",
     title: history.title,
-    subtitle: "subtitle",
     text: history.text,
     textStyle: textStyle,
     buttonText: "Know more"
