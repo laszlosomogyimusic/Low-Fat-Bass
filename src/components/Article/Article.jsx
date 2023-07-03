@@ -3,12 +3,57 @@ import "./Article.css"
 
 import  { images } from "../../constants/"
 
-var data = "";
 var articleClassName = "";
 
 
-const justifyContent = () => {
-  switch(data.justifyContentTo) {
+const HorizontalDrumstick = ({ doRotateImage = false }) => {
+  return (
+    <img 
+      className = {`article__image ${doRotateImage ? "article__image--rotated" : ""}`} 
+      src = {images.drumstickHorizontal} 
+      alt = "drumstick horizontal"  
+    />
+  )
+}
+
+const Paragraph = (props) => {
+  return (
+    <>
+    { props.textStyle ? (
+      <p className={props.pClassName} style={props.textStyle}>{props.text}</p>
+    ) : (
+      <p className={props.pClassName}>{props.text}</p>
+    )}
+    </>
+  )
+}
+
+const Subtitle = (props) => {
+  return (
+    <>
+    { props.subtitleStyle ? (
+      <p className={props.pClassName} style={props.subtitleStyle}>{props.subtitle}</p>
+    ) : (
+      <p className={props.pClassName}>{props.subtitle}</p>
+    )}
+    </>
+  )
+}
+
+const Title = (props) => {
+  return (
+    <>
+    { props.titleStyle ? (
+      <h1 className={props.titleClassName} style={props.titleStyle}>{props.title}</h1>
+    ) : (
+      <h1 className={props.titleClassName}>{props.title}</h1>
+    )}
+    </>
+  )
+}
+
+const justifyContent = (props) => {
+  switch(props.justifyContentTo) {
     case "left":
       articleClassName += "article article--justifyleft"  
     break;
@@ -24,93 +69,52 @@ const justifyContent = () => {
   }  
 }
 
-const HorizontalDrumstick = ({ doRotateImage = false }) => {
-  return (
-    <img 
-      className = {`article__image ${doRotateImage ? "article__image--rotated" : ""}`} 
-      src = {images.drumstickHorizontal} 
-      alt = "drumstick horizontal"  
-    />
-  )
-}
-
-const Paragraph = ({ pText, pClassName, pStyle}) => {
-  return (
-    <>
-    { pStyle ? (
-      <p className={pClassName} style={pStyle}>{pText}</p>
-    ) : (
-      <p className={pClassName}>{pText}</p>
-    )}
-    </>
-  )
-}
-
-const H1 = ({ h1Text, h1ClassName, h1Style}) => {
-  return (
-    <>
-    { h1Style ? (
-      <h1 className={h1ClassName} style={h1Style}>{h1Text}</h1>
-    ) : (
-      <h1 className={h1ClassName}>{h1Text}</h1>
-    )}
-    </>
-  )
-}
-
-const renderWithSubtitle = () => {
+const renderWithSubtitle = (props) => {
   return (
     <div>
-      <Paragraph 
+      <Subtitle 
         pClassName="article__subtitle" 
-        pStyle={data.subtitleStyle}
-        pText={data.subtitle} 
+        {...props}
       />            
       <HorizontalDrumstick
-        doRotateImage = {data.justifyContentTo === "left" ? false : true} 
+        doRotateImage = {props.justifyContentTo === "left" ? false : true} 
       />
-      <H1 
-        h1ClassName="article__title"
-        h1Text = {data.title}
-        h1Style = {data.titleStyle}
+      <Title 
+        titleClassName="article__title"
+        {...props}
       />
     </div>
   );
 }
 
-const renderWithoutSubtitle = () => {
+const renderWithoutSubtitle = (props) => {
   return (
     <div>
-      <H1 
-        h1ClassName="article__title"
-        h1Text = {data.title}
-        h1Style = {data.titleStyle}
+      <Title 
+        titleClassName="article__title"
+        {...props}
       />
       <HorizontalDrumstick
-        doRotateImage = {data.justifyContentTo === "left" ? false : true} 
+        doRotateImage = {props.justifyContentTo === "left" ? false : true} 
       />
     </div>
   );
 }
 
-// const Article = ({title = "", titleStyle = "", text = "", textStyle = "", subtitle = "", subtitleStyle= "", justifyContentTo = "", buttonText = "" }) => {
 const Article = (props) => {
-  data = props;
-  justifyContent();
+  justifyContent(props);
   return (
     <article className={articleClassName}>
-      { data.subtitle ? renderWithSubtitle() : renderWithoutSubtitle()
-      }
-      { data.text && (
+      { props.subtitle ? renderWithSubtitle(props) : renderWithoutSubtitle(props)}
+      { props.text && (
         <Paragraph 
           pClassName="article__text"
-          pStyle={data.textStyle}
-          pText={data.text} 
+          {...props}
         />
       )}
 
-      { data.buttonText && (
-        <button type="button" className="article__button">{data.buttonText}</button>
+      { props.buttonText && (
+        <button type="button" className="article__button">{props.buttonText}</button>
       )}      
     </article>
   )

@@ -10,6 +10,23 @@ const AboutUs = () => {
   const textStyle = {
     color: 'var(--grey)'
   }
+
+  let aboutUsArticle = {
+    justifyContentTo: "right",
+    title: aboutUs.title,
+    text: aboutUs.text,
+    textStyle: textStyle,
+    buttonText: "Know more"
+  }
+
+  let historyArticle = {
+    justifyContentTo: "left",
+    title: history.title,
+    subtitle: "subtitle",
+    text: history.text,
+    textStyle: textStyle,
+    buttonText: "Know more"
+  }
  
   return (
     <section className="aboutus app__bg app__flex--center app__section" id="about">
@@ -17,20 +34,11 @@ const AboutUs = () => {
         <img className="aboutus__logo21--image" src={images.logoNoCircle} alt="logo 21"/>
       </div>
       <section className="aboutus__content app__flex--center">
-        <Article 
-          justifyContentTo = "right"
-          title = {aboutUs.title}
-          text = {aboutUs.text}
-          textStyle = {textStyle}
-          buttonText = "Know more" />
+        <Article {...aboutUsArticle} />
         <figure className="aboutus__drumsticks flex__center">
           <img className="aboutus__drumsticks-image" src={images.drumsticksVertical} alt="drumsticks vertical" />
         </figure>
-        <Article 
-          justifyContentTo = "left"
-          title = {history.title}
-          text = {history.text}
-          buttonText = "Know more" />      
+        <Article {...historyArticle} />      
       </section>
     </section>
   )
