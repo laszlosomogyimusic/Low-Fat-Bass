@@ -3,19 +3,19 @@ import './ServiceItem.css';
 
 const ServiceItem = ({ title, price, tags }) => {
   return (
-    <article className="app__menuitem">
-      <div className="app__menuitem-head">
-        <div className="app__menuitem-name">
-          <p className="p__cormorant" style={{ color: '#DCCA87' }}>{title}</p>
+    <article className="serviceitem">
+      <header className="serviceitem__header">
+        <div className="serviceitem__title">
+          <p className="app__paragraph" style={{ color: '#ddb771ff' }}>{title}</p>
         </div>
-        <div className="app__menuitem-dash" />
-        <div className="app__menuitem-price">
-          <p className="p__cormorant">{price}</p>
+        <div className="serviceitem__dash" />
+        <div className="serviceitem__price">
+          <p className="app__paragraph">{price}</p>
         </div>
-      </div>
+      </header>
 
-      <div className="app__menuitem-sub">
-        <p className="p__opensans" style={{ color: '#AAAAAA' }}>{tags}</p>
+      <div className="serviceitem__tags">
+        <p className="app__paragraph" style={{ color: '#AAAAAA' }}>{tags}</p>
       </div>
   </article>
   )

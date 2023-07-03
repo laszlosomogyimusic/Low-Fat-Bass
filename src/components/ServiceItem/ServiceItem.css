@@ -1,4 +1,4 @@
-.app__menuitem {
+.serviceitem {
   width: 100%;
   margin: 1rem 0;
 
@@ -6,29 +6,29 @@
   flex-direction: column;
 }
 
-.app__menuitem-head {
+.serviceitem__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.app__menuitem-sub {
+.serviceitem__tags {
   width: 100%;
   margin-top: 0.2rem;
 }
 
-.app__menuitem-name {
+.serviceitem__title {
   flex: 1;
 }
 
-.app__menuitem-dash {
+.serviceitem__dash {
   width: 90px;
   height: 1px;
-  background: var(--color-golden);
+  background: var(--ecru);
   margin: 0 1rem;
 }
 
-.app__menuitem-price {
+.serviceitem__price {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

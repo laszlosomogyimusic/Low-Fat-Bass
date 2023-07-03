@@ -14,29 +14,33 @@ const Services = () => {
     <section className="services app__flex--center app__section" id="services">
       <Article {...servicesArticle} />
 
-      <section className="services__options">
-        <div className="app__specialMenu-menu_wine  app__flex--center">
-          <p className="app__specialMenu-menu_heading">Wine & Beer</p>
-          <div className="app__specialMenu_menu_items">
-            {data.wines.map((wine, index) => (
-              <ServiceItem key={wine.title + index} title={wine.title} price={wine.price} tags={wine.tags} />
+      <section className="services__content">
+        <section className="services__studiowork app__flex--center">
+          <p className="services__heading">Studio work</p>
+          <div className="services__list">
+            {data.studioworks.map((studiowork, index) => (
+              <ServiceItem key={studiowork.title + index} title={studiowork.title} price={studiowork.price} tags={studiowork.tags} />
             ))}
           </div>
-        </div>
+        </section>
 
         <figure className="services__bassguitar">
           <img className="services__bassguitar-image" src={images.bassGuitar} alt="bass guitar" />
         </figure>
 
-        <div className="app__specialMenu-menu_cocktails  app__flex--center">
-          <p className="app__specialMenu-menu_heading">Cocktails</p>
-          <div className="app__specialMenu_menu_items">
-            {data.cocktails.map((cocktail, index) => (
-              <ServiceItem key={cocktail.title + index} title={cocktail.title} price={cocktail.price} tags={cocktail.tags} />
+        <section className="services__musician  app__flex--center">
+          <p className="services__heading">Session Musician</p>
+          <div className="services__list">
+            {data.musicianworks.map((musicianwork, index) => (
+              <ServiceItem key={musicianwork.title + index} title={musicianwork.title} price={musicianwork.price} tags={musicianwork.tags} />
             ))}
           </div>
-        </div>
-      </section>      
+        </section>
+      </section>  
+      
+      <div style={{ marginTop: 15 }}>
+        <button type="button" className="app__button">View More</button>
+      </div>    
     </section>
   )
 }

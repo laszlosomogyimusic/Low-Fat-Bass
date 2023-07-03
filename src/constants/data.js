@@ -1,58 +1,58 @@
 import images from './images';
 
-const wines = [
+const studioworks = [
   {
-    title: 'Chapel Hill Shiraz',
-    price: '$56',
-    tags: 'AU | Bottle',
+    title: 'Mixing',
+    price: '£56',
+    tags: 'per hour',
   },
   {
-    title: 'Catena Malbee',
-    price: '$59',
-    tags: 'AU | Bottle',
+    title: 'Mastering',
+    price: '£40',
+    tags: 'per hour',
   },
   {
-    title: 'La Vieillw Rose',
-    price: '$44',
-    tags: 'FR | 750 ml',
+    title: 'Producing',
+    price: '£40',
+    tags: 'per hour',
   },
   {
-    title: 'Rhino Pale Ale',
-    price: '$31',
-    tags: 'CA | 750 ml',
+    title: 'Live Recording',
+    price: '£150',
+    tags: 'per day',
   },
   {
-    title: 'Irish Guinness',
-    price: '$26',
-    tags: 'IE | 750 ml',
+    title: 'Remote recording',
+    price: '£100',
+    tags: 'per day',
   },
 ];
 
-const cocktails = [
+const musicianworks = [
   {
-    title: 'Aperol Sprtiz',
-    price: '$20',
-    tags: 'Aperol | Villa Marchesi prosecco | soda | 30 ml',
+    title: 'Bass player in studio',
+    price: '£40',
+    tags: 'per hour + travel costs',
   },
   {
-    title: "Dark 'N' Stormy",
-    price: '$16',
-    tags: 'Dark rum | Ginger beer | Slice of lime',
+    title: "Bass player live",
+    price: '£40',
+    tags: 'per hour + travel costs',
   },
   {
-    title: 'Daiquiri',
-    price: '$10',
-    tags: 'Rum | Citrus juice | Sugar',
+    title: 'Guitar player in studio',
+    price: '£40',
+    tags: 'per hour + travel costs',
   },
   {
-    title: 'Old Fashioned',
-    price: '$31',
-    tags: 'Bourbon | Brown sugar | Angostura Bitters',
+    title: "Guitar player live",
+    price: '£40',
+    tags: 'per hour + travel costs',
   },
   {
-    title: 'Negroni',
-    price: '$26',
-    tags: 'Gin | Sweet Vermouth | Campari | Orange garnish',
+    title: 'Drummer',
+    price: '£40',
+    tags: 'per hour + travel costs',
   },
 ];
 
@@ -79,4 +79,4 @@ const awards = [
   },
 ];
 
-export default { wines, cocktails, awards };
+export default { studioworks, musicianworks, awards };

@@ -93,7 +93,7 @@
   color: var(--ecru);
   font-size: 2rem;
   text-align: center;
-  font-family: var(--font-base);
+  font-family: var(--font-text);
 }
 
 .navbar__hamburgermenu-linkitem {
