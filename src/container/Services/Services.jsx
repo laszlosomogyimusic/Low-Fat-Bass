@@ -5,6 +5,7 @@ import './Services.css';
 
 const Services = () => {
   let servicesArticle = {
+    type: "normal",
     justifyContentTo: "center",
     title: "Please select from the list",
     subtitle: "Our Services for You"

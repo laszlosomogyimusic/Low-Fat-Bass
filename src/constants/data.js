@@ -18,12 +18,12 @@ const studioworks = [
   },
   {
     title: 'Live Recording',
-    price: '£150',
+    price: '£90',
     tags: 'per day',
   },
   {
     title: 'Remote recording',
-    price: '£100',
+    price: '£90',
     tags: 'per day',
   },
 ];

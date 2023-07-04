@@ -4,6 +4,9 @@ import "./Article.css"
 import  { images } from "../../constants/"
 
 var articleClassName = "";
+var titleClassName = "";
+var subtitleClassName = "";
+var textClassName = "";
 
 
 const HorizontalDrumstick = ({ doRotateImage = false }) => {
@@ -52,6 +55,18 @@ const Title = (props) => {
   )
 }
 
+const initClassNames = (props) => {
+  if(props.type === "large") {
+    titleClassName = "article__title--large";
+    subtitleClassName = "article__subtitle--large";
+    textClassName = "article__text--large";    
+  } else {
+    titleClassName = "article__title";
+    subtitleClassName = "article__subtitle";
+    textClassName = "article__text";        
+  }
+}
+
 const justifyContent = (props) => {
   switch(props.justifyContentTo) {
     case "left":
@@ -73,14 +88,14 @@ const renderWithSubtitle = (props) => {
   return (
     <div>
       <Subtitle 
-        pClassName="article__subtitle" 
+        pClassName={subtitleClassName} 
         {...props}
       />            
       <HorizontalDrumstick
         doRotateImage = {props.justifyContentTo === "left" ? false : true} 
       />
       <Title 
-        titleClassName="article__title"
+        titleClassName={titleClassName}
         {...props}
       />
     </div>
@@ -91,7 +106,7 @@ const renderWithoutSubtitle = (props) => {
   return (
     <div>
       <Title 
-        titleClassName="article__title"
+        titleClassName={titleClassName}
         {...props}
       />
       <HorizontalDrumstick
@@ -102,13 +117,14 @@ const renderWithoutSubtitle = (props) => {
 }
 
 const Article = (props) => {
+  initClassNames(props);
   justifyContent(props);
   return (
     <article className={articleClassName}>
       { props.subtitle ? renderWithSubtitle(props) : renderWithoutSubtitle(props)}
       { props.text && (
         <Paragraph 
-          pClassName="article__text"
+          pClassName={textClassName}
           {...props}
         />
       )}

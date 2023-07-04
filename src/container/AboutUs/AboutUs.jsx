@@ -12,6 +12,7 @@ const AboutUs = () => {
   }
 
   let aboutUsArticle = {
+    type: "normal",
     justifyContentTo: "right",
     title: aboutUs.title,
     text: aboutUs.text,
@@ -20,6 +21,7 @@ const AboutUs = () => {
   }
 
   let historyArticle = {
+    type: "normal",
     justifyContentTo: "left",
     title: history.title,
     text: history.text,
