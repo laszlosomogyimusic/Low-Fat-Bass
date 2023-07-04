@@ -70,16 +70,16 @@ const initClassNames = (props) => {
 const justifyContent = (props) => {
   switch(props.justifyContentTo) {
     case "left":
-      articleClassName += "article article--justifyleft"  
+      articleClassName = "article article--justifyleft"  
     break;
     case "right":
-      articleClassName += "article article--justifyright" 
+      articleClassName = "article article--justifyright" 
     break;
     case "center":
-      articleClassName += "article article--justifycenter"
+      articleClassName = "article article--justifycenter"
     break;
     default:
-      articleClassName += "article article--justifyleft"  
+      articleClassName = "article article--justifyleft"  
     break;
   }  
 }
