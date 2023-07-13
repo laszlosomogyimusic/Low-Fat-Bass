@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { BsFillPlayFill, BsPauseFill } from 'react-icons/bs';
 
-import { meal } from '../../constants';
+import { playmusic } from '../../constants';
 
 import './Video.css';
 
 const Video = () => {
-  const [playVideo, setPlayVideo] = React.useState(false);
-  const vidRef = React.useRef();
+  const [playVideo, setPlayVideo] = useState(false);
+  const vidRef = useRef();
 
   return (
     <section className="video">
       <video
+        className="video__video"
         ref={vidRef}
-        src={meal}
+        src={playmusic}
         type="video/mp4"
         loop
         controls={false}
         muted
       />
-      <div className="video-overlay app__flex--center">
+      <div className="video__overlay app__flex--center">
         <div
-          className="video-overlay_circle app__flex--center"
+          className="video__overlay-circle app__flex--center"
           onClick={() => {
             setPlayVideo(!playVideo);
             if (playVideo) {
