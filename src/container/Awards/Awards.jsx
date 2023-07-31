@@ -6,7 +6,7 @@ import './Awards.css';
 
 const AwardCard = ({ award: { imgUrl, title, subtitle } }) => (
   <div className="awards__card">
-    <img src={imgUrl} alt="awards" />
+    <img className="awards__card-image" src={imgUrl} alt="awards" />
     <div className="awards__card-content">
       <p className="article__subtitle" style={{ color: '#DCCA87' }}>{title}</p>
       <p className="article__text">{subtitle}</p>
