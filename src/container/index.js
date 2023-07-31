@@ -5,7 +5,7 @@ import Footer from './Footer/Footer';
 import Gallery from './Gallery/Gallery';
 import Header from './Header/Header';
 import Video from './Video/Video';
-import Laurels from './Laurels/Laurels';
+import Awards from './Awards/Awards';
 import Services from './Services/Services';
 
 export {
@@ -16,6 +16,6 @@ export {
   Gallery,
   Header,
   Video,
-  Laurels,
+  Awards,
   Services,
 };

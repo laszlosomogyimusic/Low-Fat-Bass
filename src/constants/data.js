@@ -59,23 +59,23 @@ const musicianworks = [
 const awards = [
   {
     imgUrl: images.award02,
-    title: 'Bib Gourmond',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Grammy 1996',
+    subtitle: 'Best Rock Album',
   },
   {
     imgUrl: images.award01,
-    title: 'Rising Star',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Oscar 2003',
+    subtitle: 'Best Music',
   },
   {
     imgUrl: images.award05,
-    title: 'AA Hospitality',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Upcoming Bass Player',
+    subtitle: 'Pretty good bass player',
   },
   {
     imgUrl: images.award03,
-    title: 'Outstanding Chef',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'The Dude',
+    subtitle: 'That rug really tied the room together.',
   },
 ];
 
