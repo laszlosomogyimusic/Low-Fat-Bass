@@ -22,7 +22,7 @@ const Awards = () => {
     subtitle: "Awards & recognitions", 
   }  
   return (
-    <div className="app__bg app__wrapper app__section" id="awards">
+    <section className="app__bg app__wrapper app__section" id="awards">
       <div className="app__wrapper-info">
         <Article {...awardArticle} />
 
@@ -31,10 +31,10 @@ const Awards = () => {
         </div>
       </div>
 
-      <div className="app__wrapper-figure">
+      <figure className="app__wrapper-figure">
         <img className="awards__image" src={images.awards} alt="awards" />
-      </div>
-    </div>
+      </figure>
+    </section>
   )
 };
 
