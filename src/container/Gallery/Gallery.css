@@ -1,0 +1,137 @@
+.gallery {
+    flex-direction: row;
+
+    background: var(--midnight-green);
+    padding: 4rem 0 4rem 6rem;
+}
+
+.gallery__content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    min-width: 500px;
+    padding-right: 2rem;
+}
+
+.gallery__images {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    position: relative;
+}
+
+.gallery__images-container {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+}
+
+.gallery__images-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery__images-card {
+    position: relative;
+    min-width: 301px;
+    height: 447px;
+    margin-right: 2rem;
+}
+
+.gallery__image-icon {
+    position: absolute;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.gallery__images-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.gallery__images-card:hover img {
+    opacity: .35;
+}
+
+.gallery__images-card:hover .gallery__image-icon {
+    opacity: 1;
+}
+
+.app__gallery-images_arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 5%;
+}
+
+.gallery__arrow-icon {
+    color: var(--ecru);
+    font-size: 2rem;
+    cursor: pointer;
+    background: var(--midnight-green);
+    border-radius: 5px;
+}
+
+.gallery__arrow-icon:hover {
+    color: var(--white);
+}
+
+@media screen and (min-width: 2000px) {
+    .gallery-content {
+        min-width: 1000px;
+        padding-right: 4rem;
+    }
+
+    .gallery__images-card {
+        min-width: 400px;
+        height: 547px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery__images {
+        max-width: 100%;
+        margin: 5rem 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .gallery {
+        padding: 4rem 0 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .allery {
+        padding: 4rem 0 4rem 2rem;
+    }  
+    
+    .gallery__content {
+        min-width: 100%;
+    }
+
+    .gallery__images-card {
+        min-width: 240px;
+        height: 320px;
+    }
+}
