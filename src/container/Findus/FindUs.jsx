@@ -11,7 +11,7 @@ const FindUs = () => {
     subtitle: "Contact", 
   }  
   return (
-    <section className="app__bg app__wrapper app__section" id="awards">
+    <section className="app__bg app__wrapper app__section" id="contact">
       <div className="app__wrapper-info">
         <Article {...awardArticle} />
 

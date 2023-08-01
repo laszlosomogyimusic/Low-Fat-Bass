@@ -1,11 +1,11 @@
 const aboutUs = {
   title: "About Us",
-  text: "We are blabla blabla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate posuere tristique. In sed odio nec aliquet eu proin mauris et."
+  text: "We are professional sound engineers and session musicians, delivering the best music possible."
 };
 
 const history = {
   title: "History",
-  text: "History. Old old old. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate posuere tristique. In sed odio nec aliquet eu proin mauris et."
+  text: "We graduated in Conservatoire. And Berklee. And Liszt Ferenc Unversity. Cool places."
 };
 
 
