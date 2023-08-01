@@ -10,19 +10,19 @@ const Newsletter = () => {
     justifyContentTo: "center",
     title: "Subscribe To Our Newsletter",
     subtitle: "Newsletter",
-    text: "And never miss latest Updates!"
+    text: "And never miss the latest Updates!"
   }
 
   return (
-    <div className="app__newsletter">
-      <div className="app__newsletter-heading">
+    <section className="newsletter">
+      <div className="newsletter__heading">
         <Article {...newsletterArticle} />
       </div>
-      <div className="app__newsletter-input flex__center">
+      <div className="newsletter__input app__flex--center">
         <input type="email" placeholder="Enter your email address" />
         <button type="button" className="article__button">Subscribe</button>
       </div>
-    </div>
+    </section>
   )
 };
 

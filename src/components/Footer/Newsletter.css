@@ -1,19 +1,19 @@
-.app__newsletter {
+.newsletter {
     padding: 2rem 4rem;
     border: 1px solid var(--ecru);
     background: var(--midnight-green);
 }
 
-.app__newsletter-heading {
+.newsletter__heading {
     text-align: center;
 }
 
-.app__newsletter-input {
+.newsletter__input {
     flex-direction: row;
     margin-top: 3rem;
 }
 
-.app__newsletter-input input {
+.newsletter__input input {
     width: 620px;
     border: 1px solid var(--ecru);
     border-radius: 5px;
@@ -26,37 +26,37 @@
     background: var(--midnight-green);
 }
 
-.app__newsletter-input button {
+.newsletter__input button {
     width: max-content;
 }
 
 @media screen and (min-width: 2000px) {
-    .app__newsletter-input input {
+    .newsletter__input input {
         font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 990px) {
-    .app__newsletter-input {
+    .newsletter__input {
         flex-direction: column;
         width: 100%;
     }
 
-    .app__newsletter-input input {
+    .newsletter__input input {
         margin: 0 0 2rem 0;
         width: 100%;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .app__newsletter {
+    .newsletter {
         padding: 2rem 0;
         border: none;
     }
 }
 
 @media screen and (max-width: 300px) {
-    .app__newsletter-heading h1 {
+    .newsletter__heading h1 {
         font-size: 32px;
         line-height: 50px;
     }
