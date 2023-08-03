@@ -79,4 +79,4 @@ const awards = [
   },
 ];
 
-export default { studioworks, musicianworks, awards };
+export { studioworks, musicianworks, awards };
