@@ -2,7 +2,7 @@
 
 ## Description
 
-LS Studio is a modern responsive React app, built for a studio. 
+LSM Records is a modern responsive React app, built for a studio. 
 
 ## Live URL
 https://ls-studio.netlify.app/
