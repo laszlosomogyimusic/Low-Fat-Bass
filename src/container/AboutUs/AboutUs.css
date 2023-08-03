@@ -24,3 +24,26 @@
 .aboutus__drumsticks-image {
   height: 800px;
 }
+
+
+@media screen and (max-width: 900px) {
+  .aboutus__content {
+      flex-direction: column;
+  }
+
+  .aboutus__drumsticks {
+      margin: 4rem 0;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .aboutus__logo21-image {
+      width: 80%;
+      height: 300px;
+  }
+
+  .aboutus__drumsticks-image {
+    height: 500px;
+  }
+}

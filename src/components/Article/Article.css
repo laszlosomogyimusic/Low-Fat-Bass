@@ -113,18 +113,6 @@
   .app__wrapper {
     flex-direction: column;
   }
-
-  .app__wrapper_img {
-    margin: 5rem 0 0 0;
-  }
-
-  .app__wrapper_img-reverse {
-    margin: 0 0 5rem 0;
-  }
-
-  .app__wrapper_img img {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 850px) {
@@ -168,9 +156,18 @@
 }
 
 @media screen and (max-width: 450px) {
+  .article {
+    margin: 0 0 0 0;
+  }
+
+  .article__button {
+    padding: 0.5rem 1.5rem;
+  }
+
   .article__title--large {
     font-size: 50px;
     line-height: 50px;
+    margin-top: '0rem',
   }
  
   .article__subtitle--large {

@@ -22,3 +22,23 @@
   border: 1px solid var(--ecru);
   cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+  .video {
+    height: 50vh;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .video {
+    height: 30vh;
+    position: relative;
+  }
+
+  .video__overlay-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+}
