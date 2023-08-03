@@ -1,4 +1,4 @@
-# LS Studio
+# LSM Records
 
 ## Description
 
