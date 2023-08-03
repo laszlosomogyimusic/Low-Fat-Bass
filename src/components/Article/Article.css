@@ -56,7 +56,7 @@
 .article__title {
   font-family: var(--font-header);
   color: var(--ecru);
-  font-size: 64px;
+  font-size: 58px;
   line-height: 83.2px;
   letter-spacing: 0.04em;
   text-transform: capitalize;
@@ -65,7 +65,7 @@
 .article__title--large {
   font-family: var(--font-header);
   color: var(--ecru);
-  font-size: 90px;
+  font-size: 86px;
   line-height: 90px;
   letter-spacing: 0.04em;
   text-transform: capitalize;
@@ -79,7 +79,7 @@
   letter-spacing: 0.04em;
   text-transform: capitalize;
   line-height: 28px;
-  font-size: 15px;
+  font-size: 19px;
   margin: 2rem 0rem;
 }
 
@@ -90,7 +90,7 @@
   letter-spacing: 0.04em;
   text-transform: capitalize;
   line-height: 40px;
-  font-size: 25px;
+  font-size: 27px;
   margin: 2rem 0rem;
 }
 
@@ -107,4 +107,94 @@
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__wrapper {
+    flex-direction: column;
+  }
+
+  .app__wrapper_img {
+    margin: 5rem 0 0 0;
+  }
+
+  .app__wrapper_img-reverse {
+    margin: 0 0 5rem 0;
+  }
+
+  .app__wrapper_img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  .article__title--large {
+    font-size: 70px;
+    line-height: 70px;
+  }
+ 
+  .article__subtitle--large {
+    line-height: 40px;
+    font-size: 26px;
+  }
+
+  .article__text--large {
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+  .article__title {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
+  .article__subtitle {
+    line-height: 29.9px;
+    font-size: 20px;
+  }
+
+  .article__text {
+    line-height: 28px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__section {
+    padding: 4rem 2rem;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .article__title--large {
+    font-size: 50px;
+    line-height: 50px;
+  }
+ 
+  .article__subtitle--large {
+    line-height: 30px;
+    font-size: 22px;
+  }
+
+  .article__text--large {
+    line-height: 30px;
+    font-size: 16px;
+  }
+
+  .article__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .article__subtitle {
+    line-height: 22px;
+    font-size: 18px;
+  }
+
+  .article__text {
+    line-height: 28px;
+    font-size: 14px;
+  }
 }
