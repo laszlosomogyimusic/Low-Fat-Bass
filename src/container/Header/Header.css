@@ -1,0 +1,7 @@
+.header {
+  background-color: var(--midnight-green);
+}
+
+.header__image {
+  width: 80%;
+}

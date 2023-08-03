@@ -1,0 +1,49 @@
+.aboutus {
+  position: relative;
+}
+
+.aboutus__logo21 {
+  position: absolute;
+  inset: 0;
+}
+
+.aboutus__logo21-image {
+  width: 400px;
+  z-index: 0;
+}
+
+.aboutus__content {
+  width: 100%;
+  z-index: 2;
+}
+
+.aboutus__drumsticks {
+  margin: 2rem 4rem;
+}
+
+.aboutus__drumsticks-image {
+  height: 800px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .aboutus__content {
+      flex-direction: column;
+  }
+
+  .aboutus__drumsticks {
+      margin: 4rem 0;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .aboutus__logo21-image {
+      width: 80%;
+      height: 300px;
+  }
+
+  .aboutus__drumsticks-image {
+    height: 500px;
+  }
+}

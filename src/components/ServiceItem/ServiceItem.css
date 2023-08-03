@@ -1,0 +1,35 @@
+.serviceitem {
+  width: 100%;
+  margin: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceitem__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serviceitem__tags {
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+.serviceitem__title {
+  flex: 1;
+}
+
+.serviceitem__dash {
+  width: 90px;
+  height: 1px;
+  background: var(--ecru);
+  margin: 0 1rem;
+}
+
+.serviceitem__price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
