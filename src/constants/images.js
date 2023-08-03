@@ -19,7 +19,8 @@ import gallery03 from '../assets/gallery03.png'
 import gallery04 from '../assets/gallery04.png'
 
 
-export {
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
+export default {
   logoCircle,
   logoNoCircle,
   laszloSomogyiMusic,
