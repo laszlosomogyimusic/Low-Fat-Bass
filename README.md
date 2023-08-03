@@ -5,7 +5,7 @@
 LSM Records is a modern responsive React app, built for a studio. 
 
 ## Live URL
-https://ls-studio.netlify.app/
+https://lsm-records.netlify.app/
 
 ## Technologies
 * Get the design from an existing Figma template
