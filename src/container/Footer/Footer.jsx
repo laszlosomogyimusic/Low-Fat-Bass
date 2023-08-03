@@ -23,7 +23,7 @@ const Footer = () => {
         <article className="footer__logo">
           <img className="footer__logo-image" src={images.laszloSomogyiMusic} alt="footer_logo" />
           <p className="article__text">&quot;Do the music. Do the dance.&quot;</p>
-          <img className="article__image"  src={images.drumstickHorizontal} style={{ marginTop: 15 }} alt="footer image" />
+          <img className="article__image"  src={images.drumstickHorizontal} style={{ marginTop: 15 }} alt="footer laszlo somogyim music" />
           <div className="footer__icons">
             <FiFacebook className="footer__icon"/>
             <FiTwitter className="footer__icon" />
